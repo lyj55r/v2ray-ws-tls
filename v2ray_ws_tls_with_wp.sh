@@ -302,7 +302,7 @@ install_v2ray(){
     bash <(curl -L -s https://install.direct/go.sh)  
     cd /etc/v2ray/
     rm -f config.json
-    wget https://raw.githubusercontent.com/atrandys/v2ray-ws-tls/master/config.json
+    wget https://raw.githubusercontent.com/lyj55r/v2ray-ws-tls/master/config.json
     v2uuid=$(cat /proc/sys/kernel/random/uuid)
     sed -i "s/aaaa/$v2uuid/;" config.json
     sed -i "s/mypath/$newpath/;" config.json
@@ -364,7 +364,7 @@ download_wp(){
     wget https://cn.wordpress.org/latest-zh_CN.zip
     if [ ! -f "/usr/share/wordpresstemp/latest-zh_CN.zip" ]; then
     	red "从cn官网下载wordpress失败，尝试从github下载……"
-		wget https://github.com/atrandys/wordpress/raw/master/latest-zh_CN.zip    
+		wget https://github.com/lyj55r/wordpress/raw/master/latest-zh_CN.zip    
     fi
     if [ ! -f "/usr/share/wordpresstemp/latest-zh_CN.zip" ]; then
 		red "我它喵的从github下载wordpress也失败了，请尝试用下面的方式手动安装……"
